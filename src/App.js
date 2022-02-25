@@ -1,5 +1,4 @@
-import Login from './components/Login'
-import ForgotPassword from './components/ForgotPassword'
+import MainComponents from './components/MainComponents'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 function App() {
@@ -7,8 +6,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotpw" element={<ForgotPassword />} />
+          <Route path="/login" element={<MainComponents />} />
+          <Route path="/forgotpw" element={<MainComponents />} />
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </BrowserRouter>

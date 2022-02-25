@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { Menu, MenuItem, ButtonBase, IconButton, Typography } from '@mui/material'
 import LanguageIcon from '@mui/icons-material/Language';
+import { useTranslation } from 'react-i18next'
 
 function TabMenu() {
+    const { i18n } = useTranslation()
     const [anchorButton, setAnchorButton] = React.useState(null);
     const openMenu = Boolean(anchorButton);
     const handleClick = (event) => {
@@ -10,6 +12,10 @@ function TabMenu() {
     };
     const handleClose = () => {
         setAnchorButton(null);
+    }
+
+    const handleChangeLanguage = (language) => {
+        i18n.changeLanguage(language)
     }
     
   return (
@@ -21,7 +27,7 @@ function TabMenu() {
             onClick={handleClick}
         >
             <IconButton
-                disableRipple="true"
+                disableRipple={true}
                 size="small"
                 color="inherit"
             >
@@ -44,10 +50,10 @@ function TabMenu() {
                 horizontal: 'left'
             }}
         >
-            <MenuItem onClick={handleClose}>Português (BR)</MenuItem>
-            <MenuItem onClick={handleClose}>English (GB)</MenuItem>
-            <MenuItem onClick={handleClose}>English (US)</MenuItem>
-            <MenuItem onClick={handleClose}>Español (ES)</MenuItem>
+            <MenuItem onClick={(event) => { handleClose(event); handleChangeLanguage('pt-BR') }}>Português (BR)</MenuItem>
+            <MenuItem onClick={(event) => { handleClose(event); handleChangeLanguage('en-GB') }}>English (GB)</MenuItem>
+            <MenuItem onClick={(event) => { handleClose(event); handleChangeLanguage('en-US') }}>English (US)</MenuItem>
+            <MenuItem onClick={(event) => { handleClose(event); handleChangeLanguage('es-ES') }}>Español (ES)</MenuItem>
         </Menu>
     </>
   )

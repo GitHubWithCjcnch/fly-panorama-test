@@ -1,0 +1,14 @@
+{
+  "translations": {
+    "loginPage": {
+      "login": "Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Submit",
+      "forgotPwTitle": "Forgot my password",
+      "forgotPwSubtitle": "Enter your current email to receive password recovery instructions",
+      "messageDrewer": "Not signed in",
+      "userFieldDrewer": "User"
+    }
+  }
+}

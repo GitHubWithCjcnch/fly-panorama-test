@@ -1,0 +1,14 @@
+{
+  "translations": {
+    "loginPage": {
+      "login": "Login",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "submit": "Enviar",
+      "forgotPwTitle": "He olvidado mi contraseña",
+      "forgotPwSubtitle": "Proporcione su dirección de correo electrónico actual para recibir instrucciones de cambio de contraseña",
+      "messageDrewer": "¡Tienes que conectarte!",
+      "userFieldDrewer": "Usuario"
+    }
+  }
+}

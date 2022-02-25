@@ -1,5 +1,5 @@
 import { Drawer, Box } from "@mui/material"
-import ListRouting from "../ListRouting"
+import ListRouting from "./ListRouting"
 import ProfileInfo from "./ProfileInfo"
 
 function DrawerProfile({ drawerWidth, open, variant, onHandleToggle }) {

@@ -3,6 +3,7 @@ import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import KeyIcon from '@mui/icons-material/Key';
 import { useState } from 'react';
+import { Link } from 'react-router-dom'
 
 function ListRouting() {
   const [open, setOpen] = useState(true)
@@ -23,12 +24,14 @@ function ListRouting() {
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
         <List component="div" disablePadding>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <KeyIcon />
-            </ListItemIcon>
-            <ListItemText primary="Entrar" />
-          </ListItemButton>
+          <Link to='/login' style={{textDecoration: 'none', color: 'inherit'}}>  
+            <ListItemButton sx={{ pl: 4 }}>
+              <ListItemIcon>
+                <KeyIcon />
+              </ListItemIcon>
+              <ListItemText primary="Entrar" />
+            </ListItemButton>
+          </Link>
         </List>
       </Collapse>
     </List>
